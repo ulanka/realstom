@@ -1,0 +1,8 @@
+extends index
+
+block content
+	.center
+		p #{message}
+		
+		p
+			#{document}

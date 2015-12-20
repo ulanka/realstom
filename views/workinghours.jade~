@@ -1,0 +1,13 @@
+extends index
+
+block article
+	case lang
+		when "ru"
+			p(class='.md-body-1') #{article.content.ru}
+		when "kz"
+			i #{article.content.kz}
+		when "en"
+			i #{article.content.en}
+		default
+			i #{article.content.ru}
+		

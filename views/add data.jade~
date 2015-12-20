@@ -1,0 +1,6 @@
+extends index
+
+block content
+  form(action='/db/insert', method='post' )
+    input(type='text', name='name', value='this is a value')
+    input(type='submit', name='Submit')

@@ -1,0 +1,7 @@
+extends index
+
+block content
+  .center
+    form(action='/db/insert', method='post' )
+      input(type='text', name='name', value='this is a value')
+      input(type='submit', name='Submit')

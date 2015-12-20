@@ -1,0 +1,11 @@
+extends index
+
+block content
+	.center
+		p #{message}
+		ul
+			for collection in collections
+				li= collection
+				a(href='/collections'+collection) open
+			else
+				li sorry, no books!

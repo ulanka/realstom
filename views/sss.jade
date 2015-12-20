@@ -1,0 +1,34 @@
+extends layout
+
+block heading
+	.heading
+		cc=title
+			
+			ccc Welcome to #{title}
+
+block content
+	.center
+		p some central content
+		p #{message}
+block leftmenu
+	.left
+			for menuitem in leftmenu
+				c
+					a(href='#{menuitem.link}')
+						case lang
+							when "ru"
+								c.links #{menuitem.ru}
+							when "kz"								
+								c.links #{menuitem.kz}
+							when "en"
+								c.links #{menuitem.en}
+							default
+								c.links #{menuitem.ru}
+			else
+				li sorry, no menu items
+			div(ng-controller='stomController as stomC')
+				md-content
+					section
+						md-button(ng-href='{{myUrl}}')
+							{{stomC.title2}}
+

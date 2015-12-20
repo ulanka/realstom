@@ -1,0 +1,27 @@
+extends index
+
+block article
+	.center
+		for doctor in doctors
+			case lang
+				when "ru"
+					h1(class='md-headline') #{doctor.doctorname.ru}
+					img(src='#{doctor.photo}')
+					p(class='md-body-1') #{doctor.type.ru}					
+					p(class='md-body-1') #{doctor.workschedule.ru}
+				when "kz"
+					h1(class='md-headline') #{doctor.doctorname.kz}
+					img(src='#{doctor.photo}')
+					p(class='md-body-1') #{doctor.type.kz}					
+					p(class='md-body-1') #{doctor.workschedule.kz}
+				when "en"
+					h1(class='md-headline') #{doctor.doctorname.en}
+					img(src='#{doctor.photo}')
+					p(class='md-body-1') #{doctor.type.en}					
+					p(class='md-body-1') #{doctor.workschedule.en}
+				default
+					h1(class='md-headline') #{doctor.doctorname.ru}
+					img(src='#{doctor.photo}')
+					p(class='md-body-1') #{doctor.type.ru}					
+					p(class='md-body-1') #{doctor.workschedule.ru}
+		

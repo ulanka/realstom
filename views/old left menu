@@ -1,0 +1,18 @@
+.left
+	//-
+		p
+			a(href='/kz') Қазақ
+		p
+			a(href='/ru') Русский
+		p
+			a(href='/en') English
+		p 
+			a(href='/signup') Sign Up
+		p
+			a(href='/signin') Sign In
+		p
+			a(href='/logout') Log Out
+		p
+			a(href='/restricted') Restricted
+		p
+			a(href='/collections') Collections

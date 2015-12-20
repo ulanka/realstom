@@ -1,0 +1,35 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.left {
+    position: absolute;
+    left: 1%;
+    width: 20%;
+    top: 105px;
+    background-color: #99FF99;
+    border-radius: 10px;
+}
+
+.center {
+		position: absolute;
+    margin-left: 22%;
+    margin-right: 10%;
+    width: 60%;
+    top: 105px;
+    border-radius: 10px;
+    background-color: #FFCC99;
+}
+
+.heading {
+		position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: #59AAD2;
+    border-radius: 10px;
+}

@@ -1,0 +1,13 @@
+extends index
+
+block content
+	.center
+			p If this information is correct please press Confirm button
+			p Name: #{name}
+			p E-mail: #{email}
+			p
+				form(action='./', method='get' )
+					input(type='submit', value='Back')
+			p
+				form(action='../', method='get' )
+					input(type='submit', value='Confirm')

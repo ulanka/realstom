@@ -1,0 +1,37 @@
+(function(){
+	var app = angular.module('stom.stomSer', []);
+	
+	app.controller('stomSerController', function(){
+		this.stomServices  = 
+	[
+		{
+			serName:{ru:'Удаление',kz:'Суыру',en:'Extracting'},
+			services:
+				[
+					{
+						name:{ru:'без анестезии',kz:'анестезиясыз',en:'no anestetic'},
+						price:1500,
+						currency:{ru:'тенге',kz:'тенге',en:'tenge'},
+						profilelink:'',
+						priority:1,
+						show:true
+					},
+					{
+						name:{ru:'импортная анестезия',kz:'',en:''},
+						price:2,
+						currency:{ru:'',kz:'',en:''},
+						profilelink:'',
+						priority:1,
+						show:true
+					}
+				]
+		}, 
+		{
+			serName:{ru:'Лечение',kz:'Емдеу',en:'Treating'}
+		},
+		{
+			serName:{ru:'Протезирование',kz:'Протез салу',en:'Proteses'}
+		}
+	]
+	});
+})();

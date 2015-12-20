@@ -1,0 +1,39 @@
+extends layout
+
+block content
+	div( layout="row" ng-controller="MyController" style="padding-bottom: 10px;")
+		md-sidenav(class="md-sidenav-left md-whiteframe-z2 "  md-locked-open md-component-id="left" flex  md-is-locked-open="$mdMedia('gt-sm')") <!--MENU -->
+			md-content
+				md-toolbar( class="md-whiteframe-z2"  md-scroll-shrink)
+					h1(class="md-toolbar-tools") #{title} est. in 1997
+				div(ng-controller='stomController as stomC')
+					for menuitem in leftmenu
+						md-content(layout="column" layout-fill layout-align="top center")
+							md-button(ng-href='#{menuitem.link}')
+								case lang
+									when "ru"
+										span #{menuitem.ru}
+									when "kz"								
+										span #{menuitem.kz}
+									when "en"
+										span #{menuitem.en}
+									default
+										span #{menuitem.ru}
+		div(ng-controller="AppCtrl" layout="column" ) <!-- Tool bar-->
+			md-toolbar(class="md-whiteframe-z2" ng-click="toggleLeft()" layout="row"  layout-align="center left"  tabindex="-1"  style="position:fixed;z-index:3;" md-scroll-shrink ) <!-- -->
+				md-button(ng-click="toggleLeft()" class="md-icon-button  " layout-align="center center")
+					md-icon(md-svg-src="/images/menu.svg"  aria-label="Menu" )
+				if article
+					case lang
+						when "ru"
+							h1(class="md-toolbar-tools" ) #{article.title.ru}
+						when "kz"
+							h1(class="md-toolbar-tools" ) #{article.title.kz}
+						when "en"
+							h1(class="md-toolbar-tools" ) #{article.title.en}
+						default
+							h1(class="md-toolbar-tools" ) #{article.title.ru}			
+		div(layout="column" layout-fill style=" padding-top: 80px;padding-bottom: 10px;"  )
+			md-whiteframe( class="md-whiteframe-z1" flex  layout="column" layout-fill layout-content layout-align="center top")
+				block article
+

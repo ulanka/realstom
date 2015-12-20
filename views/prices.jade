@@ -1,0 +1,32 @@
+extends index
+
+block article
+	div
+		div(ng-controller='stomSerController as stomSerCtrl')
+			md-content(ng-repeat='stomServices in stomSerCtrl.stomServices' )
+				section
+					case lang
+						when "ru"
+							md-subheader( class="md-primary" ) {{stomServices.serName.ru}}
+							md-list(layout-padding class='md-primary') 
+								md-list-item( class="md-3-line" ng-repeat='stomService in stomServices.services')
+									div(class="md-list-item-text")
+										p {{stomService.name.ru}} - {{stomService.price}} {{stomService.currency.ru}}
+						when "kz"
+							md-subheader( class="md-primary" ) {{stomServices.serName.kz}}
+							md-list(layout-padding class='md-primary') 
+								md-list-item( class="md-3-line" ng-repeat='stomService in stomServices.services')
+									div(class="md-list-item-text")
+										p {{stomService.name.kz}} - {{stomService.price}} {{stomService.currency.kz}}
+						when "en"
+							md-subheader( class="md-primary" ) {{stomServices.serName.en}}
+							md-list(layout-padding class='md-primary') 
+								md-list-item( class="md-3-line" ng-repeat='stomService in stomServices.services')
+									div(class="md-list-item-text")
+										p {{stomService.name.en}} - {{stomService.price}} {{stomService.currency.en}}
+						default
+							md-subheader( class="md-primary" ) {{stomServices.serName.ru}}
+							md-list(layout-padding class='md-primary') 
+								md-list-item( class="md-3-line" ng-repeat='stomService in stomServices.services')
+									div(class="md-list-item-text")
+										p {{stomService.name.ru}} - {{stomService.price}} {{stomService.currency.ru}}

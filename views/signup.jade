@@ -1,0 +1,15 @@
+extends index
+
+block content
+	.center
+		form(action='/signup/', method='post' )
+			p Name:
+				input(type='text', name='name', value='#{namef}')
+			p E-mail:
+				input(type='text', name='email', value='#{email}')
+			p Password:
+				input(type='password', name='password', value='#{password}')
+			p Confirm Password:
+				input(type='password', name='confirmpassword', value='#{confirmpassword}')
+			p
+				input(type='submit', value='Sign Up')
