@@ -11,6 +11,7 @@ var localization = require('./localization')
 var lang = require('./lang')
 var doctors = require('./doctors')
 var prices = require('./prices')
+var myapi = require('./api')
 
 router.use(function (req, res, next){
 	if (req.session.lang==undefined)
@@ -50,6 +51,7 @@ router.use('/companyinfo',leftmenuf.router)
 router.use('/lang', lang.router)
 router.use('/doctors', doctors.router)
 router.use('/prices', prices.router)
+router.use('/api', myapi.router)
 
 module.exports.router = router;
 //module.exports.initvars = initvars

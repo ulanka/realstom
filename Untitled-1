@@ -1,0 +1,5 @@
+/etc/letsencrypt/live/stomatis.kz/fullchain.pem
+cert.pem
+chain.pem
+fullchain.pem
+privkey.pem
